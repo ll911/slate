@@ -1,4 +1,4 @@
-FROM ruby:2.1
+FROM ruby:latest
 MAINTAINER leo.lou@gov.bc.ca
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES true
 ENV LC_CTYPE en_US.UTF-8
