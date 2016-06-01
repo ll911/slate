@@ -7,13 +7,13 @@ ENV LANG C.UTF-8
 
 RUN \
   DEBIAN_FRONTEND=noninteractive yum update \
-  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+  && DEBIAN_FRONTEND=noninteractive yum install -y \
     curl pkg-config build-essential nodejs git libxml2-dev libxslt-dev \
   && git config --global url.https://github.com/.insteadOf git://github.com/ \
   && gem install nokogiri --no-ri --no-rdoc bundler --use-system-libraries -N \
-  && DEBIAN_FRONTEND=noninteractive apt-get purge -y \
-  && DEBIAN_FRONTEND=noninteractive apt-get autoremove -y \
-  && DEBIAN_FRONTEND=noninteractive apt-get clean \  
+  && DEBIAN_FRONTEND=noninteractive yum purge -y \
+  && DEBIAN_FRONTEND=noninteractive yum autoremove -y \
+  && DEBIAN_FRONTEND=noninteractive yum clean \  
   && rm -Rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD . /usr/src/app
