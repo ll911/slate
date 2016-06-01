@@ -14,7 +14,7 @@ RUN \
   && DEBIAN_FRONTEND=noninteractive yum purge -y \
   && DEBIAN_FRONTEND=noninteractive yum autoremove -y \
   && DEBIAN_FRONTEND=noninteractive yum clean \  
-  && rm -Rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  && rm -Rf /tmp/* /var/tmp/*
 
 ADD . /usr/src/app
  
