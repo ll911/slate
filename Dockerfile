@@ -1,9 +1,6 @@
 FROM ruby:latest
 MAINTAINER leo.lou@gov.bc.ca
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES true
-ENV LC_CTYPE en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANG C.UTF-8
 
 RUN \
   DEBIAN_FRONTEND=noninteractive yum update \
