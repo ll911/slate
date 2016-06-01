@@ -6,7 +6,7 @@ ENV LANG en_US.UTF-8
 ENV LANG C.UTF-8
 
 RUN \
-  DEBIAN_FRONTEND=noninteractive apt-get update \
+  DEBIAN_FRONTEND=noninteractive yum update \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl pkg-config build-essential nodejs git libxml2-dev libxslt-dev \
   && git config --global url.https://github.com/.insteadOf git://github.com/ \
