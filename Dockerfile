@@ -8,10 +8,6 @@ RUN \
     curl pkg-config build-essential nodejs git libxml2-dev libxslt-dev \
   && git config --global url.https://github.com/.insteadOf git://github.com/ \
   && gem install nokogiri --no-ri --no-rdoc bundler --use-system-libraries -N \
-  && DEBIAN_FRONTEND=noninteractive yum purge -y \
-  && DEBIAN_FRONTEND=noninteractive yum autoremove -y \
-  && DEBIAN_FRONTEND=noninteractive yum clean \  
-  && rm -Rf /tmp/* /var/tmp/*
 
 ADD . /usr/src/app
  
