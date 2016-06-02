@@ -2,8 +2,7 @@ FROM ruby:2.0
 MAINTAINER leo.lou@gov.bc.ca
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES true
 
-RUN \
-  sudo yum update \
+RUN yum update \
   && yum install -y \
     curl pkg-config build-essential nodejs git libxml2-dev libxslt-dev \
   && git config --global url.https://github.com/.insteadOf git://github.com/ \
