@@ -1,4 +1,4 @@
-FROM ruby:latest
+FROM ruby:2.0
 MAINTAINER leo.lou@gov.bc.ca
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES true
 
